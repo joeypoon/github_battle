@@ -6,6 +6,7 @@ var USER_DATA = {
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+var routes = require('./config/routes');
 
 var ProfilePic = React.createClass({
   render: function() {
@@ -50,6 +51,6 @@ var Avatar = React.createClass({
 })
 
 ReactDOM.render(
-  <Avatar user={USER_DATA} />,
+  routes,
   document.getElementById('app')
 );
