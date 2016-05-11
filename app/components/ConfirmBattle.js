@@ -1,12 +1,13 @@
 var React = require('react');
 
+function puke(object) {
+  return <pre>{JSON.stringify(object, null, ' ')}</pre>
+}
+
 function ConfirmBattle (props) {
-  var ui = props.isLoading ? "Loading..." : "Confirm Battle!"
-  return(
-    <div>
-      {ui}
-    </div>
-  )
+  return props.isLoading
+    ? <p>Loading...</p>
+    : <div>Confirm Battle!: {puke(props)}</div>
 }
 
 module.exports = ConfirmBattle;
