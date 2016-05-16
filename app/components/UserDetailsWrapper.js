@@ -5,14 +5,14 @@ var UserDetails = require('./UserDetails');
 function UserDetailsWrapper(props) {
   return(
     <div className="col-sm-6">
-      <p className="lead">Player {props.player}</p>
+      <p className="lead">{props.header}</p>
       {props.children}
     </div>
   )
 }
 
 UserDetailsWrapper.propTypes = {
-  player: PropTypes.string
+  header: PropTypes.string
 }
 
 module.exports = UserDetailsWrapper;
